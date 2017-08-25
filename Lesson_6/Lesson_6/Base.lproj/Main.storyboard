@@ -24,12 +24,24 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CtX-Nf-Ht0">
                                 <rect key="frame" x="16" y="188" width="200" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.94781654950000005" green="1" blue="0.13905026079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="HRN-WP-8XN"/>
                                     <constraint firstAttribute="width" constant="200" id="hKS-2e-O0K"/>
                                 </constraints>
                             </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="login" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zDC-C8-Rn6">
+                                <rect key="frame" x="31" y="238" width="313" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="9DR-BK-ekl"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="QIe-b5-fLN"/>
+                                </connections>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Hs-bJ-hFO">
                                 <rect key="frame" x="31" y="50" width="313" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -41,8 +53,11 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="zDC-C8-Rn6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="0h7-FL-wes"/>
                             <constraint firstItem="9Hs-bJ-hFO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="6vF-E7-0in"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9Hs-bJ-hFO" secondAttribute="trailing" constant="15" id="EDd-VG-cNM"/>
+                            <constraint firstItem="zDC-C8-Rn6" firstAttribute="top" secondItem="CtX-Nf-Ht0" secondAttribute="bottom" constant="20" id="Klq-7X-0W2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zDC-C8-Rn6" secondAttribute="trailing" constant="15" id="Uwc-Aj-Mzc"/>
                             <constraint firstItem="CtX-Nf-Ht0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="a03-OQ-wNd"/>
                             <constraint firstItem="9Hs-bJ-hFO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="u0Q-Qa-KUi"/>
                             <constraint firstItem="CtX-Nf-Ht0" firstAttribute="top" secondItem="9Hs-bJ-hFO" secondAttribute="bottom" constant="105" id="wu6-Qk-5Ga"/>

@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <UITextFieldDelegate> // <делегат> - подключение методов протокола
 
 @property (weak, nonatomic) IBOutlet UIButton *pushMeButton;
 @property (weak, nonatomic) IBOutlet UIView *loaderView;
@@ -61,7 +61,9 @@
     
     self.loaderView.backgroundColor = [UIColor redColor];
     [self timer];
+    
     self.pushMeButton.enabled = NO;
+
     
 //    [sender setTitle:@"Tapped" forState:UIControlStateNormal];
 //    
@@ -73,6 +75,28 @@
 //    {
 //        sender.backgroundColor = [UIColor clearColor];
 //    }
+}
+
+#pragma mark - Text Field Delegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    
+    return YES;
+}
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string // можно посмотреть какой текст выводится
+{
+    if (textField.text.length + string.length > 5) {
+        [self.pushMeButton setTitle:@"Max length must be 5!" forState:UIControlStateNormal];
+        
+        return NO;
+    }
+    
+    [self.pushMeButton setTitle:[NSString stringWithFormat:@"%@%@", textField.text, string] forState:UIControlStateNormal];
+    
+    return YES;
 }
 
 - (void)didReceiveMemoryWarning {
