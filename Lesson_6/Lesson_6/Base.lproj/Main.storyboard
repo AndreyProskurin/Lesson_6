@@ -50,15 +50,25 @@
                                     <action selector="ButtonWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fmN-No-74R"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHY-br-fh3">
+                                <rect key="frame" x="31" y="617" width="313" height="30"/>
+                                <state key="normal" title="Показать домашнее задание"/>
+                                <connections>
+                                    <segue destination="HWX-Id-V0d" kind="presentation" id="2dT-y8-IET"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="zDC-C8-Rn6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="0h7-FL-wes"/>
                             <constraint firstItem="9Hs-bJ-hFO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="6vF-E7-0in"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CHY-br-fh3" secondAttribute="trailing" constant="15" id="7RO-Zo-NPQ"/>
+                            <constraint firstItem="CHY-br-fh3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="7z6-7i-4yG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9Hs-bJ-hFO" secondAttribute="trailing" constant="15" id="EDd-VG-cNM"/>
                             <constraint firstItem="zDC-C8-Rn6" firstAttribute="top" secondItem="CtX-Nf-Ht0" secondAttribute="bottom" constant="20" id="Klq-7X-0W2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zDC-C8-Rn6" secondAttribute="trailing" constant="15" id="Uwc-Aj-Mzc"/>
                             <constraint firstItem="CtX-Nf-Ht0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="a03-OQ-wNd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CHY-br-fh3" secondAttribute="bottom" constant="20" id="cwm-Ef-g4S"/>
                             <constraint firstItem="9Hs-bJ-hFO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="u0Q-Qa-KUi"/>
                             <constraint firstItem="CtX-Nf-Ht0" firstAttribute="top" secondItem="9Hs-bJ-hFO" secondAttribute="bottom" constant="105" id="wu6-Qk-5Ga"/>
                         </constraints>
@@ -72,6 +82,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+        <!--Coffee View Controller-->
+        <scene sceneID="XtB-b5-GuM">
+            <objects>
+                <viewController id="HWX-Id-V0d" customClass="CoffeeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WoR-p2-BmF"/>
+                        <viewControllerLayoutGuide type="bottom" id="K8q-ZZ-0rP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kqj-yJ-hZC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhY-Mm-pS7">
+                                <rect key="frame" x="31" y="617" width="313" height="30"/>
+                                <state key="normal" title="Вернуться назад"/>
+                                <connections>
+                                    <action selector="backAction:" destination="HWX-Id-V0d" eventType="touchUpInside" id="V8m-L4-IRa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lhY-Mm-pS7" firstAttribute="leading" secondItem="kqj-yJ-hZC" secondAttribute="leadingMargin" constant="15" id="5hJ-7N-Tsq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lhY-Mm-pS7" secondAttribute="trailing" constant="15" id="f8r-9B-SRJ"/>
+                            <constraint firstItem="K8q-ZZ-0rP" firstAttribute="top" secondItem="lhY-Mm-pS7" secondAttribute="bottom" constant="20" id="xe6-rt-A8P"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="haJ-HZ-XV2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="932" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>

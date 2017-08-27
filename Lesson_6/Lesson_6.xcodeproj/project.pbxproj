@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		320380801F52FDD300F5A884 /* CoffeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3203807F1F52FDD300F5A884 /* CoffeeViewController.m */; };
 		328E067D1F5082050087B234 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 328E067C1F5082050087B234 /* main.m */; };
 		328E06801F5082050087B234 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 328E067F1F5082050087B234 /* AppDelegate.m */; };
 		328E06831F5082050087B234 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 328E06821F5082050087B234 /* ViewController.m */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3203807E1F52FDD300F5A884 /* CoffeeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoffeeViewController.h; sourceTree = "<group>"; };
+		3203807F1F52FDD300F5A884 /* CoffeeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoffeeViewController.m; sourceTree = "<group>"; };
 		328E06781F5082050087B234 /* Lesson_6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lesson_6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		328E067C1F5082050087B234 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		328E067E1F5082050087B234 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -67,6 +70,8 @@
 				328E06891F5082050087B234 /* LaunchScreen.storyboard */,
 				328E068C1F5082050087B234 /* Info.plist */,
 				328E067B1F5082050087B234 /* Supporting Files */,
+				3203807E1F52FDD300F5A884 /* CoffeeViewController.h */,
+				3203807F1F52FDD300F5A884 /* CoffeeViewController.m */,
 			);
 			path = Lesson_6;
 			sourceTree = "<group>";
@@ -151,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				320380801F52FDD300F5A884 /* CoffeeViewController.m in Sources */,
 				328E06831F5082050087B234 /* ViewController.m in Sources */,
 				328E06801F5082050087B234 /* AppDelegate.m in Sources */,
 				328E067D1F5082050087B234 /* main.m in Sources */,
@@ -314,6 +320,7 @@
 				328E06911F5082050087B234 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
