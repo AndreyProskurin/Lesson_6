@@ -26,6 +26,8 @@
 {
     [super viewDidLoad];
     
+    self.brightnessOfLabel.value = 1;
+    self.infoLabel.alpha = self.brightnessOfLabel.value;
     self.milk.enabled = NO;
     self.sugar.enabled = NO;
     self.makingCoffeeButton.enabled = NO;
@@ -47,74 +49,81 @@
 - (IBAction)changeBrightness:(UISlider *)sender
 {
     self.brightnessOfLabel.minimumValue = 0;
-    self.brightnessOfLabel.maximumValue = 21;
-    NSUInteger currentAlpha = self.brightnessOfLabel.value;
+    self.brightnessOfLabel.maximumValue = 1;
     
-    switch (currentAlpha) {
-        case 0:
-            [self.infoLabel setAlpha:0];
-            break;
-        case 1:
-            [self.infoLabel setAlpha:0.05];
-            break;
-        case 2:
-            [self.infoLabel setAlpha:0.1];
-            break;
-        case 3:
-            [self.infoLabel setAlpha:0.15];
-            break;
-        case 4:
-            [self.infoLabel setAlpha:0.15];
-            break;
-        case 5:
-            [self.infoLabel setAlpha:0.25];
-            break;
-        case 6:
-            [self.infoLabel setAlpha:0.3];
-            break;
-        case 7:
-            [self.infoLabel setAlpha:0.35];
-            break;
-        case 8:
-            [self.infoLabel setAlpha:0.4];
-            break;
-        case 9:
-            [self.infoLabel setAlpha:0.45];
-            break;
-        case 11:
-            [self.infoLabel setAlpha:0.5];
-            break;
-        case 12:
-            [self.infoLabel setAlpha:0.55];
-            break;
-        case 13:
-            [self.infoLabel setAlpha:0.6];
-            break;
-        case 14:
-            [self.infoLabel setAlpha:0.65];
-            break;
-        case 15:
-            [self.infoLabel setAlpha:0.7];
-            break;
-        case 16:
-            [self.infoLabel setAlpha:0.75];
-            break;
-        case 17:
-            [self.infoLabel setAlpha:0.8];
-            break;
-        case 18:
-            [self.infoLabel setAlpha:0.85];
-            break;
-        case 19:
-            [self.infoLabel setAlpha:0.9];
-            break;
-        case 20:
-            [self.infoLabel setAlpha:0.95];
-            break;
-        case 21:
-            [self.infoLabel setAlpha:1];
-            break;
-    }
+    self.infoLabel.alpha = sender.value;
+    
+//    Мой вариант  :)
+    
+//    self.brightnessOfLabel.minimumValue = 0;
+//    self.brightnessOfLabel.maximumValue = 21;
+//    NSUInteger currentAlpha = self.brightnessOfLabel.value;
+//    
+//    switch (currentAlpha) {
+//        case 0:
+//            [self.infoLabel setAlpha:0];
+//            break;
+//        case 1:
+//            [self.infoLabel setAlpha:0.05];
+//            break;
+//        case 2:
+//            [self.infoLabel setAlpha:0.1];
+//            break;
+//        case 3:
+//            [self.infoLabel setAlpha:0.15];
+//            break;
+//        case 4:
+//            [self.infoLabel setAlpha:0.15];
+//            break;
+//        case 5:
+//            [self.infoLabel setAlpha:0.25];
+//            break;
+//        case 6:
+//            [self.infoLabel setAlpha:0.3];
+//            break;
+//        case 7:
+//            [self.infoLabel setAlpha:0.35];
+//            break;
+//        case 8:
+//            [self.infoLabel setAlpha:0.4];
+//            break;
+//        case 9:
+//            [self.infoLabel setAlpha:0.45];
+//            break;
+//        case 11:
+//            [self.infoLabel setAlpha:0.5];
+//            break;
+//        case 12:
+//            [self.infoLabel setAlpha:0.55];
+//            break;
+//        case 13:
+//            [self.infoLabel setAlpha:0.6];
+//            break;
+//        case 14:
+//            [self.infoLabel setAlpha:0.65];
+//            break;
+//        case 15:
+//            [self.infoLabel setAlpha:0.7];
+//            break;
+//        case 16:
+//            [self.infoLabel setAlpha:0.75];
+//            break;
+//        case 17:
+//            [self.infoLabel setAlpha:0.8];
+//            break;
+//        case 18:
+//            [self.infoLabel setAlpha:0.85];
+//            break;
+//        case 19:
+//            [self.infoLabel setAlpha:0.9];
+//            break;
+//        case 20:
+//            [self.infoLabel setAlpha:0.95];
+//            break;
+//        case 21:
+//            [self.infoLabel setAlpha:1];
+//            break;
+//    }
 }
 
 - (IBAction)chooseCoffee:(UISegmentedControl *)sender
@@ -154,9 +163,7 @@
 
 - (IBAction)addSugar:(UIStepper *)sender
 {
-    NSUInteger count = self.sugar.value;
-    
-    switch (count) {
+    switch ((NSUInteger)self.sugar.value) {
         case 0:
             [self.infoLabel setText:@"Without Sugar"];
             break;
@@ -185,6 +192,33 @@
     [self.infoLabel setText:@"Your coffee is been making..."];
     [self.makingCoffeeButton setTitle:@"Please, wait..." forState:UIControlStateDisabled];
     [self.makingCoffeeButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateDisabled];
+    
+    CGFloat time = 1.0f;
+    
+    switch (self.coffee.selectedSegmentIndex)
+    {
+        case 0:
+            time = 5.0f;
+            break;
+        case 1:
+            time = 8.0f;
+            break;
+        case 2:
+            time = 3.0f;
+            break;
+        default:
+            break;
+            }
+    
+    [self performSelector:@selector(coffeeIsReady) withObject:nil afterDelay:time];
+}
+
+- (void)coffeeIsReady
+{
+    [self.makingCoffeeButton setEnabled:YES];
+    self.infoLabel.text = [NSString stringWithFormat:@"%@ is ready!", [self.coffee titleForSegmentAtIndex:self.coffee.selectedSegmentIndex]];
+    self.coffee.enabled = YES;
+    self.coffee.selectedSegmentIndex = UISegmentedControlNoSegment;
 }
 
 @end

@@ -136,22 +136,22 @@ Choose the coffee!</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sugar:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84q-zl-fQq">
-                                <rect key="frame" x="16" y="331.5" width="64" height="30.5"/>
+                                <rect key="frame" x="16" y="331.5" width="64" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kp5-57-fQu">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kp5-57-fQu">
                                 <rect key="frame" x="255" y="268.5" width="51" height="31"/>
-                                <color key="backgroundColor" red="1" green="0.61362849511610318" blue="0.23147009422486231" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.94370949268341064" green="0.57735002040863037" blue="0.20769521594047546" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="onTintColor" red="0.94005268812179565" green="0.54731804132461548" blue="0.2004207968711853" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="onTintColor" red="0.74363499365482233" green="0.43442172361421305" blue="0.16639185212834898" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="thumbTintColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="addMilk:" destination="HWX-Id-V0d" eventType="valueChanged" id="2HD-q4-5Xn"/>
                                 </connections>
                             </switch>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="21" minValue="-7" maxValue="38" translatesAutoresizingMaskIntoConstraints="NO" id="e5j-Qa-YU8">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="e5j-Qa-YU8">
                                 <rect key="frame" x="14" y="132" width="292" height="31"/>
                                 <color key="minimumTrackTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="thumbTintColor" red="0.25879761576652527" green="0.25884014368057251" blue="0.25878828763961792" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -175,7 +175,7 @@ Choose the coffee!</string>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uj9-80-1XN">
                                 <rect key="frame" x="30" y="421" width="260" height="40"/>
-                                <color key="backgroundColor" red="1" green="0.74267338060659061" blue="0.19701228295958451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.98237353563308716" green="0.82003986835479736" blue="0.19923976063728333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Nxw-IW-5sz"/>
                                 </constraints>
@@ -200,14 +200,13 @@ Choose the coffee!</string>
                             <constraint firstItem="kp5-57-fQu" firstAttribute="trailing" secondItem="kqj-yJ-hZC" secondAttribute="trailingMargin" id="GFW-5q-FXK"/>
                             <constraint firstItem="DTZ-eT-0am" firstAttribute="leading" secondItem="kqj-yJ-hZC" secondAttribute="leadingMargin" id="GGX-eZ-fUt"/>
                             <constraint firstItem="3Oy-km-khQ" firstAttribute="bottom" secondItem="kp5-57-fQu" secondAttribute="bottom" id="KCe-Jt-AEd"/>
-                            <constraint firstItem="1Xe-ry-uu5" firstAttribute="bottom" secondItem="84q-zl-fQq" secondAttribute="bottom" id="Ozj-MS-e1l"/>
+                            <constraint firstItem="84q-zl-fQq" firstAttribute="bottom" secondItem="1Xe-ry-uu5" secondAttribute="bottom" id="OUm-LL-pNe"/>
                             <constraint firstItem="1Xe-ry-uu5" firstAttribute="trailing" secondItem="kp5-57-fQu" secondAttribute="trailing" id="QKt-rP-Sf7"/>
                             <constraint firstAttribute="bottom" secondItem="lhY-Mm-pS7" secondAttribute="bottom" constant="20" symbolic="YES" id="ahQ-jS-2Zs"/>
                             <constraint firstItem="KFp-r0-leR" firstAttribute="trailing" secondItem="e5j-Qa-YU8" secondAttribute="trailing" id="bOs-yC-fCc"/>
                             <constraint firstItem="84q-zl-fQq" firstAttribute="leading" secondItem="3Oy-km-khQ" secondAttribute="leading" id="cOd-60-Jpb"/>
                             <constraint firstItem="DTZ-eT-0am" firstAttribute="top" secondItem="e5j-Qa-YU8" secondAttribute="bottom" constant="42" id="fQn-i4-pZu"/>
                             <constraint firstItem="1Xe-ry-uu5" firstAttribute="top" secondItem="84q-zl-fQq" secondAttribute="top" id="flt-5i-ra0"/>
-                            <constraint firstItem="Uj9-80-1XN" firstAttribute="top" secondItem="84q-zl-fQq" secondAttribute="bottom" constant="59.5" id="jkk-h7-sOi"/>
                             <constraint firstItem="KFp-r0-leR" firstAttribute="top" secondItem="WoR-p2-BmF" secondAttribute="bottom" constant="18" id="k35-rJ-ROo"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lhY-Mm-pS7" secondAttribute="trailing" constant="69" id="khN-Ef-Pzc"/>
                             <constraint firstItem="3Oy-km-khQ" firstAttribute="centerY" secondItem="kqj-yJ-hZC" secondAttribute="centerY" id="lbV-rh-OX6"/>
@@ -215,6 +214,7 @@ Choose the coffee!</string>
                             <constraint firstItem="84q-zl-fQq" firstAttribute="top" secondItem="3Oy-km-khQ" secondAttribute="bottom" constant="32" id="nDv-W3-yqG"/>
                             <constraint firstItem="KFp-r0-leR" firstAttribute="leading" secondItem="e5j-Qa-YU8" secondAttribute="leading" id="pAI-bg-Pke"/>
                             <constraint firstItem="DTZ-eT-0am" firstAttribute="trailing" secondItem="kqj-yJ-hZC" secondAttribute="trailingMargin" id="t6B-4H-Thk"/>
+                            <constraint firstItem="1Xe-ry-uu5" firstAttribute="top" secondItem="kp5-57-fQu" secondAttribute="bottom" constant="32" id="wTn-Zm-6Yh"/>
                             <constraint firstItem="lhY-Mm-pS7" firstAttribute="leading" secondItem="kqj-yJ-hZC" secondAttribute="leadingMargin" constant="69" id="xmR-Da-feh"/>
                             <constraint firstItem="e5j-Qa-YU8" firstAttribute="trailing" secondItem="kp5-57-fQu" secondAttribute="trailing" id="xzr-fV-7KY"/>
                         </constraints>
